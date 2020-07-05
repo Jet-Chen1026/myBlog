@@ -29,7 +29,7 @@
         </div>
         <!-- 头部区域（可配合layui已有的水平导航） -->
         <ul class="layui-nav layui-layout-left">
-            <li class="layui-nav-item"><a href="/" target="_blank">前台</a></li>
+            <li class="layui-nav-item"><a href="/" target="_self">返回前台</a></li>
             <li class="layui-nav-item">
                 <a href="javascript:;">新建</a>
                 <dl class="layui-nav-child">
@@ -52,7 +52,7 @@
                 </dl>
             </li>
             <li class="layui-nav-item">
-                <a href="/admin/logout">退出</a>
+                <a href="/admin/logout">注销</a>
             </li>
         </ul>
     </div>
