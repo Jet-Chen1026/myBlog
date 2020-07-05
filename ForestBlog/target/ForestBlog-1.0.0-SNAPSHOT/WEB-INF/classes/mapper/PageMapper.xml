@@ -28,7 +28,7 @@
 
   <delete id="deleteById" parameterType="java.lang.Integer" >
     delete from <include refid="tb"/>
-    where page_id = #{pageId,jdbcType=INTEGER}
+    WHERE page_id = #{pageId,jdbcType=INTEGER}
   </delete>
 
   <insert id="insert" parameterType="com.blog.entity.Page" useGeneratedKeys="true" keyProperty="pageId">
