@@ -53,7 +53,7 @@
 
   <!--获得标签总数-->
   <select id="countTag" resultType="Integer">
-    SELECT COUNT(*) FROM <include refid="tb"/>Tag
+    SELECT COUNT(*) FROM <include refid="tb"/>
   </select>
 
   <!--根据标签名获取标签-->

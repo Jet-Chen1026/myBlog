@@ -46,7 +46,7 @@
         </rapid:block>
     </div>
     <div class="clear"></div>
-    <rapid:block name="link"></rapid:block>
+<%--    <rapid:block name="link"></rapid:block>--%>
     <%@ include file="part/footer.jsp" %>
 
 </div>
