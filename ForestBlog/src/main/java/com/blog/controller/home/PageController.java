@@ -58,21 +58,21 @@ public class PageController {
     }
 
 
-    /**
-     * 文章归档页面显示
-     *
-     * @return
-     */
-    @RequestMapping(value = "/articleFile")
-    public String articleFile(Model model) {
-        List<Article> articleList = articleService.listAllNotWithContent();
-        model.addAttribute("articleList", articleList);
-        //侧边栏显示
-        //获得热评文章
-        List<Article> mostCommentArticleList = articleService.listArticleByCommentCount(10);
-        model.addAttribute("mostCommentArticleList", mostCommentArticleList);
-        return "Home/Page/articleFile";
-    }
+//    /**
+//     * 文章归档页面显示
+//     *
+//     * @return
+//     */
+//    @RequestMapping(value = "/articleFile")
+//    public String articleFile(Model model) {
+//        List<Article> articleList = articleService.listAllNotWithContent();
+//        model.addAttribute("articleList", articleList);
+//        //侧边栏显示
+//        //获得热评文章
+//        List<Article> mostCommentArticleList = articleService.listArticleByCommentCount(10);
+//        model.addAttribute("mostCommentArticleList", mostCommentArticleList);
+//        return "Home/Page/articleFile";
+//    }
 
     /**
      * 站点地图显示
@@ -98,18 +98,19 @@ public class PageController {
         return "Home/Page/siteMap";
     }
 
-    /**
-     * 留言板
-     *
-     * @return
-     */
-    @RequestMapping(value = "/message")
-    public String message(Model model) {
+//    /**
+//     * 留言板
+//     *
+//     * @return
+//     */
+//    @RequestMapping(value = "/message")
+//    public String message(Model model) {
+//
+//        //侧边栏显示
+//        //获得热评文章
+//        List<Article> mostCommentArticleList = articleService.listArticleByCommentCount(8);
+//        model.addAttribute("mostCommentArticleList", mostCommentArticleList);
+//        return "Home/Page/message";
+//    }
 
-        //侧边栏显示
-        //获得热评文章
-        List<Article> mostCommentArticleList = articleService.listArticleByCommentCount(8);
-        model.addAttribute("mostCommentArticleList", mostCommentArticleList);
-        return "Home/Page/message";
-    }
 }
