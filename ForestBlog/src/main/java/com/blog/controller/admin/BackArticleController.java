@@ -26,9 +26,6 @@ import java.util.HashMap;
 import java.util.List;
 
 
-/**
- * @author liuyanzhao
- */
 @Controller
 @RequestMapping("/admin/article")
 public class BackArticleController {

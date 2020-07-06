@@ -15,11 +15,6 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import java.util.Date;
 import java.util.List;
 
-/**
- *
- * @author 言曌
- * @date 2017/9/5
- */
 @Controller
 public class LinkController {
 	@Autowired

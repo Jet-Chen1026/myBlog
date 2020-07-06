@@ -16,11 +16,17 @@
                         <a href="/admin">登录</a>
                     </c:when>
                     <c:otherwise>
-                        <a href="/admin">进入后台</a>
+                        <a href="/admin">进入后台/</a>
+
+                        <label>你好！${sessionScope.user.userName}/</label>
+                        <a href="/admin/logout">注销<a/>
+
                     </c:otherwise>
                 </c:choose>
-                <a href="https://liuyanzhao.com/bulletin/my-service" target="_blank" style="color:red;">毕设代做/有偿服务</a>
+<%--                <a href="https://liuyanzhao.com/bulletin/my-service" target="_blank" style="color:red;">毕设代做/有偿服务</a>--%>
             </div>
+
+<%--            文章归档、关于本站等展示,--%>
             <div class="menu-topmenu-container">
                 <ul id="menu-topmenu" class="top-menu">
                     <c:forEach items="${menuList}" var="m">
@@ -35,6 +41,7 @@
                     </c:forEach>
                 </ul>
             </div>
+
         </div>
     </nav><!-- #top-header -->
     <%--顶部菜单 end--%>
@@ -42,9 +49,12 @@
     <%--主要菜单 satrt--%>
     <div id="menu-box">
         <div id="top-menu">
-                <span class="nav-search">
-                    <i class="fa fa-search"></i>
-                </span>
+
+<%--            搜索图标，删除--%>
+<%--                <span class="nav-search">--%>
+<%--                    <i class="fa fa-search"></i>--%>
+<%--                </span>--%>
+
             <div class="logo-site"><h1 class="site-title">
                 <a href="/" title="${options.optionSiteTitle}">${options.optionSiteTitle}</a>
             </h1>
@@ -79,7 +89,7 @@
                                             <c:forEach items="${allCategoryList}" var="cate">
                                                 <c:if test="${cate.categoryPid==category.categoryId}">
                                                     <li>
-                                                        <a href="/category/${cate.categoryId}" target="_blank">${cate.categoryName}</a>
+                                                        <a href="/category/${cate.categoryId}" target="_self">${cate.categoryName}</a>
                                                     </li>
                                                 </c:if>
                                             </c:forEach>

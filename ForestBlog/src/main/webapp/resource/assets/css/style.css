@@ -419,8 +419,12 @@ a, button, input {
 }
 
 .user-login, .nav-login {
-    float: left;
-    margin-left: 5px;
+    float: right;
+    margin-right: 5px;
+}
+
+.user-login a,label {
+    margin-right: 30px;
 }
 
 #user-profile a:hover {
@@ -904,7 +908,7 @@ a, button, input {
     }
 
     #search-main.shadow, #mobile-nav.shadow {
-        position: fixed;
+        /*position: fixed;*/
         left: 0;
         right: 0;
         z-index: 999;
@@ -1045,7 +1049,7 @@ a, button, input {
 /** 菜单结束 **/
 /** 搜索 **/
 #search-main {
-    position: fixed;
+    /*position: fixed;*/
     left: 0;
     right: 0;
     background: #fff;
@@ -1053,7 +1057,7 @@ a, button, input {
     text-align: center;
     margin: 5px auto;
     padding: 10px 20px 20px 20px;
-    display: none;
+    /*display: none;*/
     z-index: 999;
     border: 1px solid #ddd;
     border-radius: 2px;

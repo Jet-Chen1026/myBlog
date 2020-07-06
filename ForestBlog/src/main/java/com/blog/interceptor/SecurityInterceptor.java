@@ -10,9 +10,6 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 
-/**
- * @author liuyanzhao
- */
 @Component
 public class SecurityInterceptor extends HandlerInterceptorAdapter {
 

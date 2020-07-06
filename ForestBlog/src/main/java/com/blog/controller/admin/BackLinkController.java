@@ -13,10 +13,6 @@ import org.springframework.web.servlet.ModelAndView;
 import java.util.Date;
 import java.util.List;
 
-
-/**
- * @author liuyanzhao
- */
 @Controller
 @RequestMapping("/admin/link")
 public class BackLinkController {
