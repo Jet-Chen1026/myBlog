@@ -34,7 +34,6 @@
                 <a href="javascript:;">新建</a>
                 <dl class="layui-nav-child">
                     <dd><a href="/admin/article/insert">文章</a></dd>
-                    <dd><a href="/admin/page/insert">页面</a></dd>
                     <dd><a href="/admin/category/insert">分类</a></dd>
                     <dd><a href="/admin/notice/insert">公告</a></dd>
                     <dd><a href="/admin/link/insert">链接</a></dd>
