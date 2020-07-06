@@ -3,9 +3,6 @@ package com.blog.mapper;
 import com.blog.entity.Options;
 import org.apache.ibatis.annotations.Mapper;
 
-/**
- * @author liuyanzhao
- */
 @Mapper
 public interface OptionsMapper {
 

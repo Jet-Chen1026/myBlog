@@ -11,9 +11,6 @@ import java.io.File;
 import java.io.IOException;
 import java.util.Calendar;
 
-/**
- * @author liuyanzhao
- */
 @Slf4j
 @RestController
 @RequestMapping("/admin/upload")

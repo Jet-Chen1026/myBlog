@@ -3,11 +3,6 @@ package com.blog.service;
 import com.blog.entity.Options;
 
 
-/**
- *
- * @author 言曌
- * @date 2017/9/7
- */
 public interface OptionsService {
     /**
      * 获得基本信息

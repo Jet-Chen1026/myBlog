@@ -4,9 +4,6 @@ import com.blog.entity.Menu;
 
 import java.util.List;
 
-/**
- * @author liuyanzhao
- */
 public interface MenuMapper {
 
     /**

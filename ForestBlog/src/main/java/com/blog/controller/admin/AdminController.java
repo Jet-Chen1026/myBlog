@@ -25,9 +25,6 @@ import java.util.Map;
 
 import static com.blog.util.MyUtils.getIpAddr;
 
-/**
- * @author liuyanzhao
- */
 @Controller
 public class AdminController {
     @Autowired

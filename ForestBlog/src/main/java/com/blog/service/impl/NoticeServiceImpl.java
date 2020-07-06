@@ -9,9 +9,6 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-/**
- * @author liuyanzhao
- */
 @Service
 public class NoticeServiceImpl implements NoticeService {
 

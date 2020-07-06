@@ -7,8 +7,6 @@ import com.blog.entity.Category;
 import java.util.List;
 
 /**
- * @author 言曌
- * @date 2017/8/24
  */
 public interface CategoryService {
     /**

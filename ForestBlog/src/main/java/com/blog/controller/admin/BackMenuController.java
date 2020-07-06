@@ -12,10 +12,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
 import java.util.List;
-
-/**
- * @author liuyanzhao
- */
 @Controller
 @RequestMapping("/admin/menu")
 public class BackMenuController {
