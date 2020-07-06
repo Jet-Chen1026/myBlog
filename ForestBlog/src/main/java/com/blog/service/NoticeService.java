@@ -4,9 +4,6 @@ import com.blog.entity.Notice;
 
 import java.util.List;
 
-/**
- * @author liuyanzhao
- */
 public interface NoticeService {
 
 
