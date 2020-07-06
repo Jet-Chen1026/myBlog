@@ -18,9 +18,6 @@ import java.util.Date;
 import java.util.List;
 
 
-/**
- * @author liuyanzhao
- */
 @Controller
 @RequestMapping("/admin/comment")
 public class BackCommentController {

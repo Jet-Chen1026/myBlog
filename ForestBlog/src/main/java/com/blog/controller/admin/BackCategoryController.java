@@ -17,9 +17,6 @@ import org.springframework.web.servlet.ModelAndView;
 import java.util.List;
 
 
-/**
- * @author liuyanzhao
- */
 @Controller
 @RequestMapping("/admin/category")
 public class BackCategoryController {

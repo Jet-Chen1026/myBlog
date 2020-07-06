@@ -9,9 +9,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
 
-/**
- * @author liuyanzhao
- */
 @Controller
 @RequestMapping("/admin/options")
 public class BackOptionsController {

@@ -12,9 +12,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import java.util.List;
 
-/**
- * @author liuyanzhao
- */
 @Controller
 public class NoticeController {
 

@@ -4,10 +4,6 @@ import com.blog.entity.User;
 
 import java.util.List;
 
-/**
- * @author 言曌
- * @date 2017/8/24
- */
 
 public interface UserService {
     /**

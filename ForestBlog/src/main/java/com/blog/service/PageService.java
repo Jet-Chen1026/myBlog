@@ -4,11 +4,6 @@ import com.blog.entity.Page;
 
 import java.util.List;
 
-/**
- *
- * @author 言曌
- * @date 2017/9/7
- */
 public interface PageService {
     /**
      * 获得页面列表
