@@ -70,13 +70,7 @@
                         <dd><a href="/admin/tag">全部标签</a></dd>
                     </dl>
                 </li>
-                <li class="layui-nav-item">
-                    <a href="javascript:;">页面</a>
-                    <dl class="layui-nav-child">
-                        <dd><a href="/admin/page">全部页面</a></dd>
-                        <dd><a href="/admin/page/insert">添加页面</a></dd>
-                    </dl>
-                </li>
+
                 <li class="layui-nav-item">
                     <a class="" href="javascript:;">
                         链接
@@ -110,7 +104,7 @@
                 <li class="layui-nav-item">
                     <a href="javascript:;">设置</a>
                     <dl class="layui-nav-child">
-                        <dd><a href="/admin/menu">菜单</a></dd>
+<%--                        <dd><a href="/admin/menu">菜单</a></dd>--%>
                         <dd><a href="/admin/options">主要选项</a></dd>
                     </dl>
                 </li>

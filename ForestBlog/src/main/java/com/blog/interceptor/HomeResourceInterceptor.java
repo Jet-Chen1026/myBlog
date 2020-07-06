@@ -7,7 +7,7 @@ import com.blog.enums.ArticleStatus;
 import com.blog.enums.LinkStatus;
 
 import com.blog.entity.Category;
-import com.blog.entity.Menu;
+//import com.blog.entity.Menu;
 import com.blog.service.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -37,8 +37,8 @@ public class HomeResourceInterceptor implements HandlerInterceptor {
     @Autowired
     private OptionsService optionsService;
 
-    @Autowired
-    private MenuService menuService;
+//    @Autowired
+//    private MenuService menuService;
 
     /**
      * 在请求处理之前执行，该方法主要是用于准备资源数据的，然后可以把它们当做请求属性放到WebRequest中
@@ -46,9 +46,9 @@ public class HomeResourceInterceptor implements HandlerInterceptor {
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object o) throws IOException {
 
-        // 菜单显示
-        List<Menu> menuList = menuService.listMenu();
-        request.setAttribute("menuList", menuList);
+//        // 菜单显示
+//        List<Menu> menuList = menuService.listMenu();
+//        request.setAttribute("menuList", menuList);
 
         List<Category> categoryList = categoryService.listCategory();
         request.setAttribute("allCategoryList", categoryList);
