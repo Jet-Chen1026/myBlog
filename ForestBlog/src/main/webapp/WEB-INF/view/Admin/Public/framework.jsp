@@ -36,7 +36,6 @@
                     <dd><a href="/admin/article/insert">文章</a></dd>
                     <dd><a href="/admin/category/insert">分类</a></dd>
                     <dd><a href="/admin/notice/insert">公告</a></dd>
-                    <dd><a href="/admin/link/insert">链接</a></dd>
                 </dl>
             </li>
         </ul>
@@ -69,16 +68,16 @@
                         <dd><a href="/admin/tag">全部标签</a></dd>
                     </dl>
                 </li>
-
-                <li class="layui-nav-item">
-                    <a class="" href="javascript:;">
-                        链接
-                    </a>
-                    <dl class="layui-nav-child">
-                        <dd><a href="/admin/link">全部链接</a></dd>
-                        <dd><a href="/admin/link/insert">添加链接</a></dd>
-                    </dl>
-                </li>
+<%--                    删除侧边栏的链接选项--%>
+<%--                <li class="layui-nav-item">--%>
+<%--                    <a class="" href="javascript:;">--%>
+<%--                        链接--%>
+<%--                    </a>--%>
+<%--                    <dl class="layui-nav-child">--%>
+<%--                        <dd><a href="/admin/link">全部链接</a></dd>--%>
+<%--                        <dd><a href="/admin/link/insert">添加链接</a></dd>--%>
+<%--                    </dl>--%>
+<%--                </li>--%>
                 <li class="layui-nav-item">
                     <a href="javascript:;">公告</a>
                     <dl class="layui-nav-child">
