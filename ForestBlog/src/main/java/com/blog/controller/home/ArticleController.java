@@ -73,6 +73,7 @@ public class ArticleController {
         model.addAttribute("similarArticleList", similarArticleList);
 
         //猜你喜欢
+        //列出评论最高的五篇文章
         List<Article> mostViewArticleList = articleService.listArticleByViewCount(5);
         model.addAttribute("mostViewArticleList", mostViewArticleList);
 
