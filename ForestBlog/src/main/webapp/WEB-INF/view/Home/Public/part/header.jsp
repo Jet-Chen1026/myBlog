@@ -26,21 +26,21 @@
 <%--                <a href="https://liuyanzhao.com/bulletin/my-service" target="_blank" style="color:red;">毕设代做/有偿服务</a>--%>
             </div>
 
-<%--            文章归档、关于本站等展示,--%>
-            <div class="menu-topmenu-container">
-                <ul id="menu-topmenu" class="top-menu">
-                    <c:forEach items="${menuList}" var="m">
-                        <li class="menu-item">
-                        <c:if test="${m.menuLevel==1}">
-                                <a href="${m.menuUrl}" >
-                                    <i class="${m.menuIcon}"></i>
-                                    <span class="font-text">${m.menuName}&nbsp;</span>&nbsp;
-                                </a>
-                            </c:if>
-                        </li>
-                    </c:forEach>
-                </ul>
-            </div>
+<%--            文章归档、关于本站等展示,删除--%>
+<%--            <div class="menu-topmenu-container">--%>
+<%--                <ul id="menu-topmenu" class="top-menu">--%>
+<%--                    <c:forEach items="${menuList}" var="m">--%>
+<%--                        <li class="menu-item">--%>
+<%--                        <c:if test="${m.menuLevel==1}">--%>
+<%--                                <a href="${m.menuUrl}" >--%>
+<%--                                    <i class="${m.menuIcon}"></i>--%>
+<%--                                    <span class="font-text">${m.menuName}&nbsp;</span>&nbsp;--%>
+<%--                                </a>--%>
+<%--                            </c:if>--%>
+<%--                        </li>--%>
+<%--                    </c:forEach>--%>
+<%--                </ul>--%>
+<%--            </div>--%>
 
         </div>
     </nav><!-- #top-header -->
@@ -97,17 +97,19 @@
                                     </li>
                                 </c:if>
                             </c:forEach>
-                            <%--主要菜单其余部分--%>
-                            <c:forEach items="${menuList}" var="m">
-                                <c:if test="${m.menuLevel == 2}">
-                                    <li>
-                                        <a href="${m.menuUrl}">
-                                            <i class="${m.menuIcon}"></i>
-                                            <span class="font-text">${m.menuName}&nbsp;</span>
-                                        </a>
-                                    </li>
-                                </c:if>
-                            </c:forEach>
+
+                            <%--主要菜单其余部分,删除--%>
+<%--                            <c:forEach items="${menuList}" var="m">--%>
+<%--                                <c:if test="${m.menuLevel == 2}">--%>
+<%--                                    <li>--%>
+<%--                                        <a href="${m.menuUrl}">--%>
+<%--                                            <i class="${m.menuIcon}"></i>--%>
+<%--                                            <span class="font-text">${m.menuName}&nbsp;</span>--%>
+<%--                                        </a>--%>
+<%--                                    </li>--%>
+<%--                                </c:if>--%>
+<%--                            </c:forEach>--%>
+
                         </ul>
                     </div>
                 </nav>
