@@ -4,6 +4,7 @@ import lombok.Data;
 
 import java.util.List;
 
+//此注解为lombok提供，可以为所有类属性提供getset方法
 @Data
 public class ArticleParam {
 
