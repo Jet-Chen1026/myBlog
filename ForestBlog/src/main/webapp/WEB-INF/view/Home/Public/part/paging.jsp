@@ -23,6 +23,7 @@
             <c:choose>
                 <c:when test="${pageInfo.pageNum eq 1 }">
                     <%--当前页为第一页，隐藏上一页按钮--%>
+                    <%--do nothing--%>
                 </c:when>
                 <c:otherwise>
                     <a class="page-numbers" href="${pageUrlPrefix}=${pageInfo.pageNum-1}">
