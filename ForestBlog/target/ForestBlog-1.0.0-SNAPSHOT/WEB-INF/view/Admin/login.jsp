@@ -11,7 +11,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="zh-CN">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <title>${options.optionSiteTitle} &lsaquo; 登录</title>
+    <title>${options.optionSiteTitle} &lsaquo; 登录ccc</title>
     <link rel="stylesheet" href="/plugin/font-awesome/css/font-awesome.min.css">
     <link rel="shortcut icon" href="/img/logo.png">
     <link rel='stylesheet' id='dashicons-css'  href='/plugin/login/dashicons.min.css' type='text/css' media='all' />
@@ -106,7 +106,7 @@
         if(typeof wpOnload=='function')wpOnload();
     </script>
 
-    <p id="backtoblog"><a href="/">&larr; 返回到风吟博客</a></p>
+    <p id="backtoblog"><a href="/">&larr; 返回到${options.optionSiteTitle}</a></p>
 
 </div>
 
