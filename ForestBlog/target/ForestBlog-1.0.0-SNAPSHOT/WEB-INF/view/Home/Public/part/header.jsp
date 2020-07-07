@@ -14,7 +14,6 @@
                 <c:choose>
                     <c:when test="${sessionScope.user==null}">
                         <a href="/admin">登录</a>
-                        <a href="/">注册？？</a>
                     </c:when>
                     <c:otherwise>
                         <a href="/admin">进入后台/</a>
@@ -27,21 +26,21 @@
 <%--                <a href="https://liuyanzhao.com/bulletin/my-service" target="_blank" style="color:red;">毕设代做/有偿服务</a>--%>
             </div>
 
-<%--            删除文章归档等,--%>
-<%--            <div class="menu-topmenu-container">--%>
-<%--                <ul id="menu-topmenu" class="top-menu">--%>
-<%--                    <c:forEach items="${menuList}" var="m">--%>
-<%--                        <li class="menu-item">--%>
-<%--                        <c:if test="${m.menuLevel==1}">--%>
-<%--                                <a href="${m.menuUrl}" >--%>
-<%--                                    <i class="${m.menuIcon}"></i>--%>
-<%--                                    <span class="font-text">${m.menuName}&nbsp;</span>&nbsp;--%>
-<%--                                </a>--%>
-<%--                            </c:if>--%>
-<%--                        </li>--%>
-<%--                    </c:forEach>--%>
-<%--                </ul>--%>
-<%--            </div>--%>
+<%--            文章归档、关于本站等展示,--%>
+            <div class="menu-topmenu-container">
+                <ul id="menu-topmenu" class="top-menu">
+                    <c:forEach items="${menuList}" var="m">
+                        <li class="menu-item">
+                        <c:if test="${m.menuLevel==1}">
+                                <a href="${m.menuUrl}" >
+                                    <i class="${m.menuIcon}"></i>
+                                    <span class="font-text">${m.menuName}&nbsp;</span>&nbsp;
+                                </a>
+                            </c:if>
+                        </li>
+                    </c:forEach>
+                </ul>
+            </div>
 
         </div>
     </nav><!-- #top-header -->
