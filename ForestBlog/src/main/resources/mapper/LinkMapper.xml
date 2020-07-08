@@ -14,7 +14,7 @@
     <result column="link_order" property="linkOrder" jdbcType="INTEGER" />
     <result column="link_status" property="linkStatus" jdbcType="INTEGER" />
   </resultMap>
-  
+<!--  新增linkmapper.xml-->
   <sql id="Base_Column_List" >
     link_id, link_url, link_name, link_image, link_description, link_owner_nickname, 
     link_owner_contact, link_update_time, link_create_time, link_order, link_status
