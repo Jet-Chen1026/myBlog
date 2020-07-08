@@ -50,9 +50,6 @@ public class IndexController {
         //公告
         List<Notice> noticeList = noticeService.listNotice(NoticeStatus.NORMAL.getValue());
         model.addAttribute("noticeList", noticeList);
-        //友情链接
-        List<Link> linkList = linkService.listLink(LinkStatus.NORMAL.getValue());
-        model.addAttribute("linkList", linkList);
 
         //侧边栏显示
         //标签列表显示
