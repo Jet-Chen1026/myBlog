@@ -32,9 +32,6 @@ public class HomeResourceInterceptor implements HandlerInterceptor {
     private TagService tagService;
 
     @Autowired
-    private LinkService linkService;
-
-    @Autowired
     private OptionsService optionsService;
 
 //    @Autowired
@@ -59,7 +56,6 @@ public class HomeResourceInterceptor implements HandlerInterceptor {
         siteBasicStatistics.add(articleService.countArticleComment() + "");
         siteBasicStatistics.add(categoryService.countCategory() + "");
         siteBasicStatistics.add(tagService.countTag() + "");
-        siteBasicStatistics.add(linkService.countLink(LinkStatus.NORMAL.getValue()) + "");
         siteBasicStatistics.add(articleService.countArticleView() + "");
         request.setAttribute("siteBasicStatistics", siteBasicStatistics);
         //最后更新的文章
