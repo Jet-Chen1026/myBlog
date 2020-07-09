@@ -50,9 +50,13 @@ public class BackArticleController {
         HashMap<String, Object> criteria = new HashMap<>(1);
         if (status == null) {
             model.addAttribute("pageUrlPrefix", "/admin/article?pageIndex");
+            //文章列表状态
+            model.addAttribute("articleListStatus",2);
         } else {
             criteria.put("status", status);
             model.addAttribute("pageUrlPrefix", "/admin/article?status=" + status + "&pageIndex");
+            //文章列表状态
+            model.addAttribute("articleListStatus",status);
         }
         PageInfo<Article> articlePageInfo = articleService.pageArticle(pageIndex, pageSize, criteria);
         model.addAttribute("pageInfo", articlePageInfo);
@@ -69,6 +73,7 @@ public class BackArticleController {
     public String insertArticleView(Model model) {
         List<Category> categoryList = categoryService.listCategory();
         List<Tag> tagList = tagService.listTag();
+        //将已有的分类、标签传递至前台，供选择
         model.addAttribute("categoryList", categoryList);
         model.addAttribute("tagList", tagList);
         return "Admin/Article/insert";
@@ -91,6 +96,7 @@ public class BackArticleController {
         article.setArticleTitle(articleParam.getArticleTitle());
         //文章摘要
         int summaryLength = 150;
+
         String summaryText = HtmlUtil.cleanHtmlTag(articleParam.getArticleContent());
         if (summaryText.length() > summaryLength) {
             String summary = summaryText.substring(0, summaryLength);
@@ -202,7 +208,11 @@ public class BackArticleController {
         }
         article.setTagList(tagList);
         articleService.updateArticleDetail(article);
-        return "redirect:/admin/article";
+
+        
+        return "redirect:/admin/article/edit/"+articleParam.getArticleId();
+        //return "redirect:/edit?id=";
+        //return "redirect:/admin/article";
     }
 
 

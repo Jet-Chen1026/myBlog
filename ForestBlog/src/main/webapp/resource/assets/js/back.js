@@ -86,6 +86,14 @@ function deleteArticle(id) {
     }
 }
 
+// //切换列表中文章状态
+// function changeArticleState(value) {
+//     confirm("????"+value);
+//     if(confirm("确定？")==true)
+//         return;
+//
+// }
+
 //查询文章
 function queryArticle() {
     //提交form

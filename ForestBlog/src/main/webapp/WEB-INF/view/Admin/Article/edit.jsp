@@ -20,6 +20,7 @@
               <a href="/admin/article">文章列表</a>
               <a><cite>修改文章</cite></a>
         </span>
+        <a id="preview" href="/article/${article.articleId}" target="_blank">预览</a>
     </blockquote>
 
 
@@ -44,6 +45,7 @@
 
         <div class="layui-form-item">
             <label class="layui-form-label">分类 <span style="color: #FF5722; ">*</span></label>
+
             <div class="layui-input-inline">
                 <select name="articleParentCategoryId" id="articleParentCategoryId"
                         lay-filter="articleParentCategoryId">
@@ -59,6 +61,7 @@
                     </c:forEach>
                 </select>
             </div>
+
             <div class="layui-input-inline">
                 <select name="articleChildCategoryId" id="articleChildCategoryId" lay-filter="articleChildCategoryId">
                     <c:forEach items="${categoryList}" var="c">
@@ -102,10 +105,13 @@
         <div class="layui-form-item">
             <div class="layui-input-block">
                 <button class="layui-btn" lay-submit="" lay-filter="demo1">保存</button>
-                <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+                <button type="reset" class="layui-btn layui-btn-primary">重置修改</button>
+
             </div>
         </div>
     </form>
+
+
 
     <blockquote class="layui-elem-quote layui-quote-nm">
         温馨提示：

@@ -148,6 +148,7 @@ public class ArticleServiceImpl implements ArticleService {
                                          Integer pageSize,
                                          HashMap<String, Object> criteria) {
         PageHelper.startPage(pageIndex, pageSize);
+
         List<Article> articleList = articleMapper.findAll(criteria);
         for (int i = 0; i < articleList.size(); i++) {
             //封装CategoryList

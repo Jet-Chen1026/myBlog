@@ -22,6 +22,10 @@
 .layui-btn {
     margin: 2px 0!important;
 }
+#preview{
+    color: #01AAED;
+    margin-left: 900px;
+}
 
 
 
@@ -87,6 +91,8 @@ table td {
 table .layui-btn {
     color:#ffffff!important;
 }
+
+.
 
 /*首页 start*/
 

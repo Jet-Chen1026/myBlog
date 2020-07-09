@@ -49,11 +49,18 @@
     <%--主要菜单 satrt--%>
     <div id="menu-box">
         <div id="top-menu">
+
+<%--            搜索图标，删除--%>
+<%--                <span class="nav-search">--%>
+<%--                    <i class="fa fa-search"></i>--%>
+<%--                </span>--%>
+
             <div class="logo-site"><h1 class="site-title">
                 <a href="/" title="${options.optionSiteTitle}">${options.optionSiteTitle}</a>
             </h1>
                 <p class="site-description">${options.optionSiteDescrption}</p>
-            </div>
+            </div><!-- .logo-site -->
+
             <div id="site-nav-wrap">
                 <div id="sidr-close">
                     <a href="#sidr-close" class="toggle-sidr-close">×</a>

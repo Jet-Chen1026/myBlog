@@ -24,6 +24,19 @@
 </rapid:override>
 
 <rapid:override name="content">
+
+<%--    <form class="layui-form">--%>
+<%--        <div class="layui-form-item">--%>
+<%--            <label class="layui-form-label">下拉选择框</label>--%>
+<%--            <div class="layui-input-block">--%>
+<%--                <select id="articleStatus1" name="articleStatus1" lay-filter="articleStatus1">--%>
+<%--                    <option value="0">写作</option>--%>
+<%--                    <option value="1">阅读</option>--%>
+<%--                </select>--%>
+<%--            </div>--%>
+<%--        </div>--%>
+<%--    </form>--%>
+
     <blockquote class="layui-elem-quote">
         <span class="layui-breadcrumb" lay-separator="/">
           <a href="/admin">首页</a>
@@ -34,23 +47,37 @@
     <div class="layui-tab layui-tab-card">
         <form id="articleForm" method="post">
             <input type="hidden" name="currentUrl" id="currentUrl" value="">
+
             <table class="layui-table">
                 <colgroup>
+                    <col width="200">
+                    <col width="200">
                     <col width="300">
-                    <col width="150">
+                    <col width="220">
                     <col width="100">
-                    <col width="150">
-                    <col width="100">
-                    <col width="50">
+                    <col width="80">
                 </colgroup>
                 <thead>
                 <tr>
                     <th>标题</th>
                     <th>所属分类</th>
-                    <th>状态</th>
+                    <th class="layui-form">
+                            <div class="layui-form-item">
+                                <div class="layui-input-block">
+                                    <select id="articleStatus1" name="articleStatus1" lay-filter="articleStatus1"
+                                            onchange="changeArticleState(value)">
+                                        <option value="2" <c:if test="${articleListStatus==2}">selected</c:if>> 全部</option>
+
+                                        <option value="1" <c:if test="${articleListStatus==1}">selected</c:if>> 已发布</option>
+                                        <option value="0" <c:if test="${articleListStatus==0}">selected</c:if>> 草稿</option>
+                                    </select>
+                                </div>
+                            </div>
+                    </th>
                     <th>发布时间</th>
                     <th>操作</th>
                     <th>id</th>
+
                 </tr>
                 </thead>
                 <tbody>
@@ -103,8 +130,34 @@
         <%@ include file="../Public/paging.jsp" %>
     </div>
 
+
+
 </rapid:override>
+
 <rapid:override name="footer-script">
-    <script></script>
+    <script>
+
+        layui.use(['form','laydate'], function(){
+            var form = layui.form
+            ,laydate = layui.laydate;
+
+            //各种基于事件的操作，下面会有进一步介绍
+            form.on('select(articleStatus1)', function(data){
+                console.log(data.value); //得到被选中的值
+                if(data.value==1){  //列出已发布
+                        window.location.href="/admin/article?status=1";
+                }
+                else if(data.value==0){ //列出所有
+                        window.location.href="/admin/article?status=0";
+                }
+                else{
+                    window.location.href="/admin/article";
+                }
+                //console.log("aaaaa");
+            })
+
+        });
+    </script>
 </rapid:override>
+
 <%@ include file="../Public/framework.jsp" %>

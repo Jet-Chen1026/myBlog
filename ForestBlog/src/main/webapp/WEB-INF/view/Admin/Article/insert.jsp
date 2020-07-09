@@ -23,6 +23,8 @@
 
     <form class="layui-form"  method="post" id="myForm" action="/admin/article/insertSubmit">
 
+
+<%--        layout富文本编辑器的使用--%>
         <div class="layui-form-item">
             <label class="layui-form-label">标题 <span style="color: #FF5722; ">*</span></label>
             <div class="layui-input-block">
@@ -44,6 +46,7 @@
                 <select name="articleParentCategoryId" id="articleParentCategoryId" lay-filter="articleParentCategoryId" required>
                     <option value="" selected="">一级分类</option>
                     <c:forEach items="${categoryList}" var="c">
+<%--                        pid=0,表示一级标题--%>
                         <c:if test="${c.categoryPid==0}">
                             <option value="${c.categoryId}">${c.categoryName}</option>
                         </c:if>
@@ -94,6 +97,7 @@
 <rapid:override name="footer-script">
 
     <script>
+        //类似声明
         layui.use(['form', 'layedit', 'laydate'], function() {
             var form = layui.form
                 , layer = layui.layer
@@ -109,7 +113,7 @@
                 }
             });
 
-            //创建一个编辑器
+            //id=content,由id创建content编辑器
             var editIndex = layedit.build('content',{
                     height:350,
                 }
@@ -124,10 +128,12 @@
                 }
                 , pass: [/(.+){6,12}$/, '密码必须6到12位']
                 , content: function (value) {
+                    //？？？？
                     layedit.sync(editIndex);
                 }
             });
 
+            //自定义工具Bar
             layedit.build('content', {
                 tool: [
                     'strong' //加粗
@@ -142,7 +148,7 @@
                     ,'unlink' //清除链接
                     ,'face' //表情
                     ,'image' //插入图片
-                    ,'code'
+                    ,'code' //代码
                 ]
             });
 
@@ -150,7 +156,7 @@
                 layui.code();
             });
 
-            //二级联动
+            //二级联动，监听下拉选择事件
             form.on("select(articleParentCategoryId)",function () {
                 var optionstring = "";
                 var articleParentCategoryId = $("#articleParentCategoryId").val();
@@ -160,8 +166,12 @@
                 }
                 </c:forEach>
                 $("#articleChildCategoryId").html("<option value=''selected>二级分类</option>"+optionstring);
+                console.log("fffff");
+                //刷新select选择框，动态渲染？？双向绑定？？
                 form.render('select'); //这个很重要
             })
+
+
 
      });
 //        window.onbeforeunload = function() {
