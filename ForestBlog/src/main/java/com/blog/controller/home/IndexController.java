@@ -26,8 +26,6 @@ public class IndexController {
     @Autowired
     private ArticleService articleService;
 
-    @Autowired
-    private LinkService linkService;
 
     @Autowired
     private NoticeService noticeService;
